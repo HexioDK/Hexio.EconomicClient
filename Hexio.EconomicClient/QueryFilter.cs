@@ -12,11 +12,14 @@ namespace Hexio.EconomicClient
         Eq,
         Like,
         In,
+        Gte // Greater than or equal
     }
     
     public class QueryFilter<T> where T : IReadModel, new()
     {
         public IList<QueryFilterValue> Filters { get; set; } = new List<QueryFilterValue>();
+        public int PageSize { get; set; } = 1000;
+        public int SkipPages { get; set; } = 0;
 
         public QueryFilter<T> Where(Expression<Func<T, object>> expression, QueryOperator queryOperator, string value)
         {
