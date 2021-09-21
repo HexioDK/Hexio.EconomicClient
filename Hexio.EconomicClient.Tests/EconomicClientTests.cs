@@ -200,7 +200,15 @@ namespace Hexio.EconomicClient.Test
 
             var filterString = filter.ToString();
 
-            var correctFilterString = "filteR=BookedInvoiceNumber%24eq%3A1%24or%3ABookedInvoiceNumber%24eq%3A2"; // This is URL Encoded Original Value is filter=bookedInvoiceNumber$eq:1$or:BookedInvoiceNumber$eq:2
+            var correctFilterString = "filter=BookedInvoiceNumber%24eq%3A1%24or%3ABookedInvoiceNumber%24eq%3A2&pagesize=1000&skippages=0"; // This is URL Encoded Original Value is filter=bookedInvoiceNumber$eq:1$or:BookedInvoiceNumber$eq:2
+
+            filterString.Should().BeEquivalentTo(correctFilterString);
+
+            filter.PageSize = 500;
+
+            filterString = filter.ToString();
+            
+            correctFilterString = "filter=BookedInvoiceNumber%24eq%3A1%24or%3ABookedInvoiceNumber%24eq%3A2&pagesize=500&skippages=0"; // This is URL Encoded Original Value is filter=bookedInvoiceNumber$eq:1$or:BookedInvoiceNumber$eq:2
 
             filterString.Should().BeEquivalentTo(correctFilterString);
         }

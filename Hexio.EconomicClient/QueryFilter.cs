@@ -61,8 +61,8 @@ namespace Hexio.EconomicClient
             }
 
             filter = WebUtility.UrlEncode(filter);
-            
-            return $"filter={filter}";
+
+            return $"filter={filter}&pagesize={PageSize}&skippages={SkipPages}";
         }
     }
 
