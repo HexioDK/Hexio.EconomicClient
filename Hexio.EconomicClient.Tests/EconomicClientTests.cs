@@ -194,13 +194,19 @@ namespace Hexio.EconomicClient.Test
         {
             var filter = new QueryFilter<BookedInvoiceReadModel>();
 
+            var filterString = filter.ToString();
+
+            var correctFilterString = "pagesize=1000&skippages=0";
+            
+            filterString.Should().BeEquivalentTo(correctFilterString);
+
             filter
                 .Where(x => x.BookedInvoiceNumber, QueryOperator.Eq, "1")
                 .Where(x => x.BookedInvoiceNumber, QueryOperator.Eq, "2");
 
-            var filterString = filter.ToString();
+            filterString = filter.ToString();
 
-            var correctFilterString = "filter=BookedInvoiceNumber%24eq%3A1%24or%3ABookedInvoiceNumber%24eq%3A2&pagesize=1000&skippages=0"; // This is URL Encoded Original Value is filter=bookedInvoiceNumber$eq:1$or:BookedInvoiceNumber$eq:2
+            correctFilterString = "filter=BookedInvoiceNumber%24eq%3A1%24or%3ABookedInvoiceNumber%24eq%3A2&pagesize=1000&skippages=0"; // This is URL Encoded Original Value is filter=bookedInvoiceNumber$eq:1$or:BookedInvoiceNumber$eq:2
 
             filterString.Should().BeEquivalentTo(correctFilterString);
 

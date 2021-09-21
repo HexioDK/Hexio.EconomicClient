@@ -53,16 +53,22 @@ namespace Hexio.EconomicClient
 
         public override string ToString()
         {
+            var queryParams = new List<string>();
+            
+            
             var filter = string.Join("$or:", Filters.Select(x => x.ToString()));
             
-            if (Filters.Count == 0)
+            if (Filters.Count > 0)
             {
-                return "";
+                filter = WebUtility.UrlEncode(filter);
+                
+                queryParams.Add($"filter={filter}");
             }
+            
+            queryParams.Add($"pagesize={PageSize}");
+            queryParams.Add($"skippages={SkipPages}");
 
-            filter = WebUtility.UrlEncode(filter);
-
-            return $"filter={filter}&pagesize={PageSize}&skippages={SkipPages}";
+            return string.Join("&", queryParams);
         }
     }
 
