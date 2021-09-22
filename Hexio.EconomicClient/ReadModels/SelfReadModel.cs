@@ -57,7 +57,7 @@ namespace Hexio.EconomicClient.ReadModels
     public class Company
     {
         public string Name { get; set; }
-        public long PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string Email { get; set; }
     }
 
