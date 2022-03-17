@@ -48,6 +48,13 @@ namespace Hexio.EconomicClient.CreateModels
         public decimal Amount { get; set; }
         public string Text { get; set; }
         public Customer Customer { get; set; }
+        public EntryAccount ContraAccount { get; set; }
+        public EntryAccount Account { get; set; }
+    }
+
+    public class EntryAccount
+    {
+        public int? AccountNumber { get; set; }
     }
 
     public class PaymentDetails
