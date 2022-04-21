@@ -4,6 +4,7 @@ namespace Hexio.EconomicClient.CreateModels
 {
     public class CreateCustomerModel
     {
+        public long? CustomerNumber { get; set; }
         public string Address { get; set; } = "";
         public string City { get; set; } = "";
         public string Zip { get; set; } = "";
