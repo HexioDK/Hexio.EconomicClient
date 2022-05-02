@@ -13,6 +13,7 @@ namespace Hexio.EconomicClient.CreateModels
         public List<CustomerPaymentEntry> CustomerPayments { get; set; }
         public List<SupplierInvoiceEntry> SupplierInvoices { get; set; }
         public List<SupplierPaymentEntry> SupplierPayments { get; set; }
+        public List<FinanceVoucherEntry> FinanceVouchers { get; set; }
     }
 
     public class SupplierInvoiceEntry
@@ -38,7 +39,16 @@ namespace Hexio.EconomicClient.CreateModels
         public string Date { get; set; }
         public decimal Amount { get; set; }
         public Account ContraAccount { get; set; }
+    }
 
+    public class FinanceVoucherEntry
+    {
+        public Currency Currency { get; set; } = new Currency();
+        public string Text { get; set; }
+        public string Date { get; set; }
+        public decimal Amount { get; set; }
+        public EntryAccount Account { get; set; }
+        public EntryAccount ContraAccount { get; set; }
     }
 
     public class CustomerPaymentEntry
