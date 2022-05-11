@@ -26,7 +26,7 @@ namespace Hexio.EconomicClient.CreateModels
         public string SupplierInvoiceNumber { get; set; }
         public decimal Amount { get; set; }
         public Account ContraAccount { get; set; } = new Account();
-        public VatAccount ContraVatAccount { get; set; } = new VatAccount();
+        public DefaultVatAccount ContraDefaultVatAccount { get; set; } = new DefaultVatAccount();
         public PaymentDetails PaymentDetails { get; set; }
     }
     
@@ -49,6 +49,7 @@ namespace Hexio.EconomicClient.CreateModels
         public decimal Amount { get; set; }
         public EntryAccount Account { get; set; }
         public EntryAccount ContraAccount { get; set; }
+        public VatAccount VatAccount { get; set; }
     }
 
     public class CustomerPaymentEntry
@@ -79,7 +80,7 @@ namespace Hexio.EconomicClient.CreateModels
         public int PaymentTypeNumber { get; set; } = 7;
     }
 
-    public class VatAccount
+    public class DefaultVatAccount
     {
         public string VatCode { get; set; } = "I25";
     }
@@ -107,5 +108,10 @@ namespace Hexio.EconomicClient.CreateModels
         {
             Year = year;
         }
+    }
+
+    public class VatAccount
+    {
+        public string VatCode { get; set; }
     }
 }
