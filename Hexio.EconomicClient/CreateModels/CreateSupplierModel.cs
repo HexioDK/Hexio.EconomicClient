@@ -4,7 +4,7 @@ namespace Hexio.EconomicClient.CreateModels
 {
     public class CreateSupplierModel
     {
-        public long SupplierNumber { get; set; }
+        public long? SupplierNumber { get; set; }
         public string Currency { get; set; } = "DKK";
         public SupplierGroup SupplierGroup { get; set; }
         public VatZone VatZone { get; set; } = new VatZone();

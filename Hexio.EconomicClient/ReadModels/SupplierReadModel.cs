@@ -1,10 +1,31 @@
+using System.Collections.Generic;
+using Hexio.EconomicClient.CreateModels;
+
 namespace Hexio.EconomicClient.ReadModels
 {
-    public class SupplierReadModel
+    public class SupplierReadModel : IReadModel
     {
-        public long SupplierNumber { get; set; }
+        public long? SupplierNumber { get; set; }
         public string Currency { get; set; }
+        public SupplierGroup SupplierGroup { get; set; }
+        public VatZone VatZone { get; set; }
         public string Name { get; set; }
+        public PaymentTerms PaymentTerms { get; set; } = new PaymentTerms();
         public string CorporateIdentificationNumber { get; set; }
+        public IList<string> FieldsToFilter { get; } = new List<string>
+        {
+            "supplierNumber",
+            "name",
+            "currency",
+            "barred",
+            "corporateIdentificationNumber",
+            "email",
+            "address",
+            "zip",
+            "city",
+            "country",
+            "bankAccount",
+            "defaultInvoiceText"
+        };
     }
 }
