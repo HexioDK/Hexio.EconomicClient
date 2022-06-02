@@ -45,7 +45,7 @@ namespace Hexio.EconomicClient
         Task<CustomerContactReadModel> CreateCustomerContact([Path] long customerNumber, [Body] CreateCustomerContact createCustomerContactModel);
         
         [Get("suppliers")]
-        Task<ResponseCollection<SupplierReadModel>> ListSuppliers([Query] [RawQueryString] QueryFilter<SupplierReadModel> filter = null);
+        Task<ResponseCollection<SupplierReadModel>> ListSuppliers([RawQueryString] QueryFilter<SupplierReadModel> filter = null);
         
         [Get("suppliers/{supplierNumber}")]
         [AllowAnyStatusCode]
