@@ -27,6 +27,7 @@ namespace Hexio.EconomicClient.CreateModels
         public decimal Amount { get; set; }
         public Account ContraAccount { get; set; } = new Account();
         public DefaultVatAccount ContraDefaultVatAccount { get; set; } = new DefaultVatAccount();
+        public DefaultVatAccount ContraVatAccount { get; set; }
         public PaymentDetails PaymentDetails { get; set; }
     }
     
