@@ -14,7 +14,7 @@ namespace Hexio.EconomicClient
         protected override void Load(ContainerBuilder builder)
         {
             builder.Register(c => Settings);
-            builder.Register(c => EconomicClientFactory.Execute(Settings.AppSecretToken, Settings.AgreementGrantToken)).AsImplementedInterfaces().SingleInstance();
+            builder.Register(c => EconomicClientFactory.Execute(Settings.AppSecretToken, Settings.AgreementGrantToken)).AsImplementedInterfaces().InstancePerLifetimeScope();
         }
     }
 }
