@@ -13,6 +13,8 @@ namespace Hexio.EconomicClient.ReadModels
         public PaymentTerms PaymentTerms { get; set; } = new PaymentTerms();
         public string CorporateIdentificationNumber { get; set; }
         public Account CostAccount { get; set; }
+        public RemittanceAdvice RemittanceAdvice { get; set; }
+        public string BankAccount { get; set; }
 
         public IList<string> FieldsToFilter { get; } = new List<string>
         {
@@ -29,5 +31,11 @@ namespace Hexio.EconomicClient.ReadModels
             "bankAccount",
             "defaultInvoiceText"
         };
+    }
+
+    public class RemittanceAdvice
+    {
+        public PaymentType PaymentType { get; set; }
+        public string CreditorId { get; set; }
     }
 }
