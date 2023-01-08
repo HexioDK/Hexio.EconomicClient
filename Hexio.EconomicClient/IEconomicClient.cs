@@ -86,6 +86,9 @@ namespace Hexio.EconomicClient
         [Post("quotes/sent")]
         Task<QuoteReadModel> MarkQuoteAsSend([Body] MarkQuoteAsSendModel model);
         */
+
+        [Get("products")]
+        Task<ResponseCollection<ProductReadModel>> GetProducts([RawQueryString] QueryFilter<ProductReadModel> filter = null);
     }
     
     public static class EconomicClientExtensions
