@@ -5,6 +5,7 @@ namespace Hexio.EconomicClient.ReadModels
 {
     public class ProductReadModel : IReadModel
     {
+        public string Name { get; set; }
         public string BarCode { get; set; }
         public bool Barred { get; set; }
         public decimal CostPrice { get; set; }
