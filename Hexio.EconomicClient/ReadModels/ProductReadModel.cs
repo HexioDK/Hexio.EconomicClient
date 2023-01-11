@@ -12,7 +12,7 @@ namespace Hexio.EconomicClient.ReadModels
         public string Description { get; set; }
         public Inventory Inventory { get; set; }
         public ProductGroupReadModel ProductGroup { get; set; }
-        public long? ProductNumber { get; set; }
+        public string ProductNumber { get; set; }
         public decimal RecommendedPrice { get; set; }
         public decimal SalesPrice { get; set; }
         public Uri Self { get; set; }
