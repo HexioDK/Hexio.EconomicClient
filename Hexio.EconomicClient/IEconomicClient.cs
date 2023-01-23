@@ -89,6 +89,9 @@ namespace Hexio.EconomicClient
 
         [Get("products")]
         Task<ResponseCollection<ProductReadModel>> GetProducts([RawQueryString] QueryFilter<ProductReadModel> filter = null);
+
+        [Get("products/{productNumber}")]
+        Task<ResponseCollection<ProductReadModel>> GetProduct([Path] string productNumber);
     }
     
     public static class EconomicClientExtensions
