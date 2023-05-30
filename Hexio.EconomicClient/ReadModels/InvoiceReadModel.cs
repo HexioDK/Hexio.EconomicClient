@@ -55,7 +55,7 @@ namespace Hexio.EconomicClient.ReadModels
 
     public class Product
     {
-        public long? ProductNumber { get; set; }
+        public string ProductNumber { get; set; }
         public Uri Self { get; set; }
     }
 
