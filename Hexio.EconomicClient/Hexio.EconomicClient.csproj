@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="RestEase" Version="1.6.4" />
+        <PackageReference Include="Autofac" Version="6.1.0" />
+        <PackageReference Include="RestEase" Version="1.5.2" />
     </ItemGroup>
 
 </Project>
