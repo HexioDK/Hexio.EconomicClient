@@ -46,7 +46,7 @@ namespace Hexio.EconomicClient.ReadModels
         public Product Product { get; set; }
         public decimal? Quantity { get; set; }
         public decimal? UnitNetPrice { get; set; }
- 2       public decimal? DiscountPercentage { get; set; }
+        public decimal? DiscountPercentage { get; set; }
         public decimal? UnitCostPrice { get; set; }
         public decimal? TotalNetAmount { get; set; }
         public decimal? MarginInBaseCurrency { get; set; }
