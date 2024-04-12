@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Hexio.EconomicClient.CreateModels;
 using Hexio.EconomicClient.ReadModels;
 using RestEase;
+using PaymentTerms = Hexio.EconomicClient.CreateModels.PaymentTerms;
 
 namespace Hexio.EconomicClient
 {
@@ -92,6 +93,12 @@ namespace Hexio.EconomicClient
 
         [Get("products/{productNumber}")]
         Task<ProductReadModel> GetProduct([Path] string productNumber);
+        
+        [Get("layouts")]
+        Task<ResponseCollection<LayoutModel>> GetLayouts();
+        
+        [Get("payment-terms")]
+        Task<ResponseCollection<PaymentTerms>> GetPaymentTerms();
     }
     
     public static class EconomicClientExtensions

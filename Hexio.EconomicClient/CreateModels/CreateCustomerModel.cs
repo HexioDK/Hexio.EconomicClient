@@ -29,5 +29,6 @@ namespace Hexio.EconomicClient.CreateModels
     public class PaymentTerms
     {
         public long? PaymentTermsNumber { get; set; } = 1;
+        public string Name { get; set; }
     }
 }
