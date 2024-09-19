@@ -12,16 +12,16 @@ namespace Hexio.EconomicClient.ReadModels
         public List<Line> Lines { get; set; }
         public DateTimeOffset? Date { get; set; }
         public string Currency { get; set; }
-        public long? ExchangeRate { get; set; }
-        public long? NetAmount { get; set; }
-        public long? NetAmountInBaseCurrency { get; set; }
-        public long? GrossAmount { get; set; }
-        public long? GrossAmountInBaseCurrency { get; set; }
-        public long? MarginInBaseCurrency { get; set; }
-        public long? MarginPercentage { get; set; }
-        public long? VatAmount { get; set; }
-        public long? RoundingAmount { get; set; }
-        public long? CostPriceInBaseCurrency { get; set; }
+        public decimal? ExchangeRate { get; set; }
+        public decimal? NetAmount { get; set; }
+        public decimal? NetAmountInBaseCurrency { get; set; }
+        public decimal? GrossAmount { get; set; }
+        public decimal? GrossAmountInBaseCurrency { get; set; }
+        public decimal? MarginInBaseCurrency { get; set; }
+        public decimal? MarginPercentage { get; set; }
+        public decimal? VatAmount { get; set; }
+        public decimal? RoundingAmount { get; set; }
+        public decimal? CostPriceInBaseCurrency { get; set; }
         public DateTimeOffset? DueDate { get; set; }
         public CreateModels.PaymentTerms PaymentTerms { get; set; }
         public Customer Customer { get; set; }

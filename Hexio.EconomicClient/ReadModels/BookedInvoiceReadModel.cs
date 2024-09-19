@@ -9,15 +9,15 @@ namespace Hexio.EconomicClient.ReadModels
         public long BookedInvoiceNumber { get; set; }
         public DateTimeOffset? Date { get; set; }
         public string Currency { get; set; }
-        public long? ExchangeRate { get; set; }
-        public long? NetAmount { get; set; }
-        public long? NetAmountInBaseCurrency { get; set; }
-        public long? GrossAmount { get; set; }
-        public long? GrossAmountInBaseCurrency { get; set; }
-        public long? VatAmount { get; set; }
-        public long? RoundingAmount { get; set; }
-        public long? Remainder { get; set; }
-        public long? RemainderInBaseCurrency { get; set; }
+        public decimal? ExchangeRate { get; set; }
+        public decimal? NetAmount { get; set; }
+        public decimal? NetAmountInBaseCurrency { get; set; }
+        public decimal? GrossAmount { get; set; }
+        public decimal? GrossAmountInBaseCurrency { get; set; }
+        public decimal? VatAmount { get; set; }
+        public decimal? RoundingAmount { get; set; }
+        public decimal? Remainder { get; set; }
+        public decimal? RemainderInBaseCurrency { get; set; }
         public DateTimeOffset? DueDate { get; set; }
         public PaymentTerms PaymentTerms { get; set; }
         public Customer Customer { get; set; }
