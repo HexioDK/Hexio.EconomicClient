@@ -90,6 +90,12 @@ namespace Hexio.EconomicClient
 
         [Get("products")]
         Task<ResponseCollection<ProductReadModel>> GetProducts([RawQueryString] QueryFilter<ProductReadModel> filter = null);
+        
+        [Post("products")]
+        Task<ProductReadModel> CreateProduct([Body] CreateProductModel createProductModel);
+        
+        [Get("product-groups")]
+        Task<ResponseCollection<ProductGroupReadModel>> GetProductGroups();
 
         [Get("products/{productNumber}")]
         Task<ProductReadModel> GetProduct([Path] string productNumber);

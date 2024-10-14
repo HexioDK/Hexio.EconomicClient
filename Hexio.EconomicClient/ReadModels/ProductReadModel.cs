@@ -30,6 +30,7 @@ namespace Hexio.EconomicClient.ReadModels
 
     public class ProductGroupReadModel
     {
+        public int ProductGroupNumber { get; set; }
     }
 
     public class Inventory
