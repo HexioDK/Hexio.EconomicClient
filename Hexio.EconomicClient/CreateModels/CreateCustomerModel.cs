@@ -31,7 +31,7 @@ namespace Hexio.EconomicClient.CreateModels
     {
         public string Name { get; set; }
         public string PaymentTermsType { get; set; }
-        public int DaysOfCredit { get; set; }
+        public int? DaysOfCredit { get; set; }
     }
 
     public class PaymentTerms : CreatePaymentTermsModel, IReadModel
