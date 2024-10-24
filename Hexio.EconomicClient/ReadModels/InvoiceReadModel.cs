@@ -44,13 +44,13 @@ namespace Hexio.EconomicClient.ReadModels
         public long? SortKey { get; set; }
         public Unit Unit { get; set; }
         public Product Product { get; set; }
-        public long? Quantity { get; set; }
-        public long? UnitNetPrice { get; set; }
-        public long? DiscountPercentage { get; set; }
-        public long? UnitCostPrice { get; set; }
-        public long? TotalNetAmount { get; set; }
-        public long? MarginInBaseCurrency { get; set; }
-        public long? MarginPercentage { get; set; }
+        public decimal? Quantity { get; set; }
+        public decimal? UnitNetPrice { get; set; }
+        public decimal? DiscountPercentage { get; set; }
+        public decimal? UnitCostPrice { get; set; }
+        public decimal? TotalNetAmount { get; set; }
+        public decimal? MarginInBaseCurrency { get; set; }
+        public decimal? MarginPercentage { get; set; }
     }
 
     public class Product

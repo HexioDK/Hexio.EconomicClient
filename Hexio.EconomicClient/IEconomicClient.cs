@@ -104,7 +104,7 @@ namespace Hexio.EconomicClient
         Task<ResponseCollection<LayoutModel>> GetLayouts();
         
         [Get("payment-terms")]
-        Task<ResponseCollection<PaymentTerms>> GetPaymentTerms();
+        Task<ResponseCollection<PaymentTerms>> GetPaymentTerms([RawQueryString] QueryFilter<PaymentTerms> filter = null);
     }
     
     public static class EconomicClientExtensions

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Hexio.EconomicClient.ReadModels;
 
 namespace Hexio.EconomicClient.CreateModels
@@ -26,9 +27,25 @@ namespace Hexio.EconomicClient.CreateModels
         public long? CustomerGroupNumber { get; set; } = 1;
     }
 
-    public class PaymentTerms
+    public class PaymentTerms : IReadModel
     {
         public long? PaymentTermsNumber { get; set; } = 1;
         public string Name { get; set; }
+        public PaymentTermsType PaymentTermsType { get; set; }
+        public int DaysOfCredit { get; set; }
+        public IList<string> FieldsToFilter { get; } = new List<string>();
+    }
+
+    public enum PaymentTermsType
+    {
+        Net,
+        DueDate,
+        InvoiceMonth,
+        PaidInCash,
+        Prepaid,
+        Factoring,
+        InvoiceWeekStartingSunday,
+        InvoiceWeekStartingMonday,
+        Creditcard
     }
 }
