@@ -105,6 +105,9 @@ namespace Hexio.EconomicClient
         
         [Get("payment-terms")]
         Task<ResponseCollection<PaymentTerms>> GetPaymentTerms([RawQueryString] QueryFilter<PaymentTerms> filter = null);
+        
+        [Post("payment-terms")]
+        Task<ProductReadModel> CreatePaymentTerms([Body] CreatePaymentTermsModel model);
     }
     
     public static class EconomicClientExtensions

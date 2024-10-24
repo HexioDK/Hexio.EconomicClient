@@ -27,12 +27,16 @@ namespace Hexio.EconomicClient.CreateModels
         public long? CustomerGroupNumber { get; set; } = 1;
     }
 
-    public class PaymentTerms : IReadModel
+    public class CreatePaymentTermsModel
     {
-        public long? PaymentTermsNumber { get; set; } = 1;
+        public long PaymentTermsNumber { get; set; } = 1;
         public string Name { get; set; }
         public PaymentTermsType PaymentTermsType { get; set; }
         public int DaysOfCredit { get; set; }
+    }
+
+    public class PaymentTerms : CreatePaymentTermsModel, IReadModel
+    {
         public IList<string> FieldsToFilter { get; } = new List<string>();
     }
 
