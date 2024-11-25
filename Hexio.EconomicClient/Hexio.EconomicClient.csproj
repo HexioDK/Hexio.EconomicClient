@@ -5,7 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="RestEase" Version="1.6.4" />
+        <PackageReference Include="Autofac" Version="6.1.0" />
+        <PackageReference Include="RestEase" Version="1.5.2" />
     </ItemGroup>
 
 </Project>
