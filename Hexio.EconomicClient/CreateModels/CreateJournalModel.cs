@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Hexio.EconomicClient.ReadModels;
 
 namespace Hexio.EconomicClient.CreateModels
 {
@@ -74,11 +75,16 @@ namespace Hexio.EconomicClient.CreateModels
         public PaymentType PaymentType { get; set; } = new PaymentType();
         public string AccountNo { get; set; }
         public string Message { get; set; }
+        public string IbanSwift { get; set; }
+        public string FiSupplierNo { get; set; }
+        public string OcrLine { get; set; } 
     }
 
-    public class PaymentType
+    public class PaymentType : IReadModel 
     {
         public int PaymentTypeNumber { get; set; } = 7;
+        public string Name { get; set; }
+        public IList<string> FieldsToFilter { get; } = new List<string>();
     }
 
     public class DefaultVatAccount
