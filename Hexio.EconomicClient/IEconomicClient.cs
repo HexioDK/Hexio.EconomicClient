@@ -57,6 +57,9 @@ namespace Hexio.EconomicClient
         
         [Post("suppliers")]
         Task<SupplierReadModel> CreateSupplier([Body] CreateSupplierModel createSupplierModel);
+        
+        [Put("suppliers/{supplierNumber}")]
+        Task<SupplierReadModel> CreateSupplier([Path] long supplierNumber, [Body] CreateSupplierModel createSupplierModel);
 
         [Get("invoices/{invoiceStatus}")]
         Task<ResponseCollection<BookedInvoiceReadModel>> ListBookedInvoices([Path] InvoiceStatus invoiceStatus,
