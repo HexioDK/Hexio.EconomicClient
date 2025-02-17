@@ -59,7 +59,7 @@ namespace Hexio.EconomicClient
         Task<SupplierReadModel> CreateSupplier([Body] CreateSupplierModel createSupplierModel);
         
         [Put("suppliers/{supplierNumber}")]
-        Task<SupplierReadModel> CreateSupplier([Path] long supplierNumber, [Body] CreateSupplierModel createSupplierModel);
+        Task<SupplierReadModel> UpdateSupplier([Path] long supplierNumber, [Body] CreateSupplierModel createSupplierModel);
 
         [Get("invoices/{invoiceStatus}")]
         Task<ResponseCollection<BookedInvoiceReadModel>> ListBookedInvoices([Path] InvoiceStatus invoiceStatus,
