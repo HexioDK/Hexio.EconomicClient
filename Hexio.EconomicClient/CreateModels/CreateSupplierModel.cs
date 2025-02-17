@@ -12,6 +12,7 @@ namespace Hexio.EconomicClient.CreateModels
         public PaymentTerms PaymentTerms { get; set; } = new PaymentTerms();
         public string CorporateIdentificationNumber { get; set; }
         public Account CostAccount { get; set; }
+        public RemittanceAdvice RemittanceAdvice { get; set; } = null;
     }
 
     public class SupplierGroup
