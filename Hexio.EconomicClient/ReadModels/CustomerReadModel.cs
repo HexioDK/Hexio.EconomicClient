@@ -31,6 +31,7 @@ namespace Hexio.EconomicClient.ReadModels
         public MetaData MetaData { get; set; }
         public Uri Self { get; set; }
         public bool Barred { get; set; }
+        public LayoutModel LayoutModel { get; set; }
         public IList<string> FieldsToFilter { get; } = new List<string>
         {
             "address","balance","barred","city","corporateIdentificationNumber","country","creditLimit","currency","customerNumber","ean","email","lastUpdated","mobilePhone","name","publicEntryNumber","telephoneAndFaxNumber","vatNumber","website","zip"
