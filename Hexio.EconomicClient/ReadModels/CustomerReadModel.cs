@@ -32,6 +32,7 @@ namespace Hexio.EconomicClient.ReadModels
         public Uri Self { get; set; }
         public bool Barred { get; set; }
         public LayoutModel Layout { get; set; }
+        public Attention Attention { get; set; }
         public IList<string> FieldsToFilter { get; } = new List<string>
         {
             "address","balance","barred","city","corporateIdentificationNumber","country","creditLimit","currency","customerNumber","ean","email","lastUpdated","mobilePhone","name","publicEntryNumber","telephoneAndFaxNumber","vatNumber","website","zip"
