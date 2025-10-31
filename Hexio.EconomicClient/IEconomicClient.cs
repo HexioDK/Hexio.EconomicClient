@@ -114,6 +114,9 @@ namespace Hexio.EconomicClient
         
         [Post("payment-terms")]
         Task<PaymentTerms> CreatePaymentTerms([Body] CreatePaymentTermsModel model);
+        
+        [Get("employees")]
+        Task<ResponseCollection<EmployeeModel>> GetEmployees();
     }
     
     public static class EconomicClientExtensions
