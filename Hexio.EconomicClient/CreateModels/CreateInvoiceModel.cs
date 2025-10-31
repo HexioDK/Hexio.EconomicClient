@@ -53,7 +53,19 @@ namespace Hexio.EconomicClient.CreateModels
 
     public class References
     {
+        public CustomerContact CustomerContact { get; set; } = null;
+        public SalesReference SalesPerson { get; set; } = null;
         public string Other { get; set; }
     } 
+    
+    public class CustomerContact
+    {
+        public long CustomerContactNumber { get; set; }
+    }
+
+    public class SalesReference
+    {
+        public long EmployeeNumber { get; set; }
+    }
 
 }
