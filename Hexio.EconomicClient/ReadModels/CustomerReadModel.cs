@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Hexio.EconomicClient.CreateModels;
 
 namespace Hexio.EconomicClient.ReadModels
 {
@@ -33,6 +34,7 @@ namespace Hexio.EconomicClient.ReadModels
         public bool Barred { get; set; }
         public LayoutModel Layout { get; set; }
         public Attention Attention { get; set; }
+        public SalesReference SalesPerson { get; set; }
         public IList<string> FieldsToFilter { get; } = new List<string>
         {
             "address","balance","barred","city","corporateIdentificationNumber","country","creditLimit","currency","customerNumber","ean","email","lastUpdated","mobilePhone","name","publicEntryNumber","telephoneAndFaxNumber","vatNumber","website","zip"
