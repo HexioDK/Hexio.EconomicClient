@@ -6,6 +6,7 @@ namespace Hexio.EconomicClient.ReadModels
 {
     public class BookedInvoiceReadModel : IReadModel
     {
+        public long DraftInvoiceNumber { get; set; }
         public long BookedInvoiceNumber { get; set; }
         public DateTimeOffset? Date { get; set; }
         public string Currency { get; set; }

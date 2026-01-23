@@ -184,9 +184,9 @@ namespace Hexio.EconomicClient.Test
         [Fact]
         public async Task ListBookedInvoices()
         {
-            var bookedInvoices = await Client.Value.ListBookedInvoices(InvoiceStatus.Booked);
-            var unpaidInvoices = await Client.Value.ListBookedInvoices(InvoiceStatus.Unpaid, new QueryFilter<BookedInvoiceReadModel>().Where(x => x.BookedInvoiceNumber, QueryOperator.Eq, "1"));
-            var paidInvoices = await Client.Value.ListBookedInvoices(InvoiceStatus.Paid);
+            var bookedInvoices = await Client.Value.ListInvoices(InvoiceStatus.Booked);
+            var unpaidInvoices = await Client.Value.ListInvoices(InvoiceStatus.Unpaid, new QueryFilter<BookedInvoiceReadModel>().Where(x => x.BookedInvoiceNumber, QueryOperator.Eq, "1"));
+            var paidInvoices = await Client.Value.ListInvoices(InvoiceStatus.Paid);
         }
 
         [Fact]

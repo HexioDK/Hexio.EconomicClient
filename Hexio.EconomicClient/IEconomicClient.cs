@@ -62,8 +62,7 @@ namespace Hexio.EconomicClient
         Task<SupplierReadModel> UpdateSupplier([Path] long supplierNumber, [Body] CreateSupplierModel createSupplierModel);
 
         [Get("invoices/{invoiceStatus}")]
-        Task<ResponseCollection<BookedInvoiceReadModel>> ListBookedInvoices([Path] InvoiceStatus invoiceStatus,
-            [RawQueryString] QueryFilter<BookedInvoiceReadModel> queryFilter = null); 
+        Task<ResponseCollection<BookedInvoiceReadModel>> ListInvoices([Path] InvoiceStatus invoiceStatus, [RawQueryString] QueryFilter<BookedInvoiceReadModel> queryFilter = null); 
 
         [Post("invoices/drafts")]
         Task<InvoiceReadModel> CreateInvoice([Body] CreateInvoiceModel createInvoiceModel);
@@ -117,6 +116,9 @@ namespace Hexio.EconomicClient
         
         [Get("employees")]
         Task<ResponseCollection<EmployeeModel>> GetEmployees();
+        
+        [Get("units")]
+        Task<ResponseCollection<UnitModel>> GetUnits();
     }
     
     public static class EconomicClientExtensions
