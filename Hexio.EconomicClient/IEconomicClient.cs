@@ -34,7 +34,7 @@ namespace Hexio.EconomicClient
         Task<CustomerReadModel> CreateCustomer([Body] CreateCustomerModel createCustomerModel);
         
         [Put("customers/{customerNumber}")]
-        Task<CustomerReadModel> UpdateCustomer([Path] long customerNumber, [Body] CreateCustomerModel createCustomerModel);
+        Task<CustomerReadModel> UpdateCustomer([Path] long customerNumber, [Body] UpdateCustomerModel createCustomerModel);
 
         [Delete("customers/{customerNumber}")]
         Task DeleteCustomer([Path] long customerNumber);
