@@ -46,7 +46,7 @@ namespace Hexio.EconomicClient
         Task<CustomerContactReadModel> CreateCustomerContact([Path] long customerNumber, [Body] CreateCustomerContact createCustomerContactModel);
         
         [Put("customers/{customerNumber}/contacts/{contactNumber}")]
-        Task<CustomerContactReadModel> UpdateCustomerContact([Path] long customerNumber, [Path] long contactNumber, [Body] CreateCustomerContact model);
+        Task<CustomerContactReadModel> UpdateCustomerContact([Path] long customerNumber, [Path] long contactNumber, [Body] UpdateCustomerContact model);
         
         [Get("suppliers")]
         Task<ResponseCollection<SupplierReadModel>> ListSuppliers([RawQueryString] QueryFilter<SupplierReadModel> filter = null);

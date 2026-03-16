@@ -6,4 +6,9 @@ namespace Hexio.EconomicClient.CreateModels
         public string Email { get; set; }
         public string Phone { get; set; }
     }
+
+    public class UpdateCustomerContact : CreateCustomerContact
+    {
+        public int CustomerContactNumber { get; set; }
+    }
 }
