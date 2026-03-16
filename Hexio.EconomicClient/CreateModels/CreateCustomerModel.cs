@@ -22,7 +22,7 @@ namespace Hexio.EconomicClient.CreateModels
         public PaymentTerms PaymentTerms { get; set; } = new PaymentTerms();
     }
 
-    public class UpdateCustomerModel : CreateCustomerContact
+    public class UpdateCustomerModel : CreateCustomerModel
     {
         public Attention Attention { get; set; }
         public SalesReference SalesPerson { get; set; }
