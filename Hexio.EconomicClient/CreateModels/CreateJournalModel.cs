@@ -15,6 +15,20 @@ namespace Hexio.EconomicClient.CreateModels
         public List<SupplierInvoiceEntry> SupplierInvoices { get; set; }
         public List<SupplierPaymentEntry> SupplierPayments { get; set; }
         public List<FinanceVoucherEntry> FinanceVouchers { get; set; }
+        public List<ManualCustomerInvoiceEntry> ManualCustomerInvoices { get; set; }
+    }
+
+    public class ManualCustomerInvoiceEntry
+    {
+        public Customer Customer { get; set; }
+        public long? CustomerInvoice { get; set; }
+        public Currency Currency { get; set; } = new Currency();
+        public string Text { get; set; }
+        public string Date { get; set; }
+        public string DueDate { get; set; }
+        public decimal Amount { get; set; }
+        public EntryAccount ContraAccount { get; set; }
+        public VatAccount ContraVatAccount { get; set; }
     }
 
     public class SupplierInvoiceEntry
